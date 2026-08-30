@@ -6,10 +6,9 @@ public class MouseMovements : MonoBehaviour
 {
 
     public float mouseSensitivity = 100f;
+    public Transform playerBody;
 
     float xRotation = 0f;
-    float YRotation = 0f;
-
     void Start()
     {
         //Locking the cursor to the middle of the screen and making it invisible
@@ -37,13 +36,14 @@ public class MouseMovements : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         //control rotation around y axis (Look up and down)
-        YRotation += mouseX;
         //applying both rotations
 
         //You can see theres 3 parameters (X,Y,Z), the reason Z is locked to 0 is that we dont  want to rotate around it. Take your neck as an example, moving your neck to the side is basically rotating around the Z axis, which in this game, we dont want to do that
 
         // CAN WORK IF WERE DOING SOMETHING THAT REQUIRES LEANING.
-        transform.localRotation = Quaternion.Euler(xRotation, YRotation, 0f);
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+
+        playerBody.Rotate(Vector3.up * mouseX);
 
     }
 }

@@ -32,7 +32,7 @@ public class SelectionManager : MonoBehaviour
             // We use this instead
             if (selectedTransform.TryGetComponent(out Interactable_Object interactableObject))
             {
-                interaction_Info_Text.text = interactableObject.GetItemName();
+                interaction_Info_Text.text = interactableObject.ItemName;
                 interaction_Info_UI.SetActive(true);
             }
             else

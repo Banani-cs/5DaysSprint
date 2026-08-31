@@ -68,10 +68,8 @@ public class AI_Movements : MonoBehaviour
 
             if (walkCounter <= 0)
             {
-                stopPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 isWalking = false;
                 //stop movement
-                transform.position = stopPosition;
                 animator.SetBool("isRunning", false);
                 //reset the waitCounter
                 waitCounter = waitTime;

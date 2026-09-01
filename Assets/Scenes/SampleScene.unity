@@ -162,6 +162,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rabbit 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6877974865409555933, guid: 2040d9235f0919642a9c1f90693cc6fe, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 7650978505062502649, guid: 2040d9235f0919642a9c1f90693cc6fe, type: 3}
       propertyPath: m_AnimatePhysics
       value: 0
@@ -172,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8264124731411241124, guid: 2040d9235f0919642a9c1f90693cc6fe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8264124731411241124, guid: 2040d9235f0919642a9c1f90693cc6fe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -214,6 +218,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3136281549177668207, guid: 2040d9235f0919642a9c1f90693cc6fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 195759382}
+    - targetCorrespondingSourceObject: {fileID: 3136281549177668207, guid: 2040d9235f0919642a9c1f90693cc6fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 195759384}
     - targetCorrespondingSourceObject: {fileID: 3136281549177668207, guid: 2040d9235f0919642a9c1f90693cc6fe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 195759383}
@@ -265,6 +272,19 @@ MonoBehaviour:
   walkCounter: 0
   waitCounter: 0
   isWalking: 0
+--- !u!114 &195759384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195759381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ea343cb1bd86d4384b41cf4f7b0a70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable_Object
+  <ItemName>k__BackingField: Rabbit
 --- !u!1 &214541971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9222779883738455603, guid: dc1ce056f90e09749a3bfa868460e5a7, type: 3}
@@ -278,6 +298,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1739469360}
     m_Modifications:
+    - target: {fileID: -7630869998601432089, guid: dc1ce056f90e09749a3bfa868460e5a7, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 9127571765615287619, guid: dc1ce056f90e09749a3bfa868460e5a7, type: 3}
       propertyPath: m_AnimatePhysics
       value: 0
@@ -288,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9216862163715132703, guid: dc1ce056f90e09749a3bfa868460e5a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9216862163715132703, guid: dc1ce056f90e09749a3bfa868460e5a7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -332,6 +356,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9222779883738455603, guid: dc1ce056f90e09749a3bfa868460e5a7, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 287436804}
+    - targetCorrespondingSourceObject: {fileID: 9222779883738455603, guid: dc1ce056f90e09749a3bfa868460e5a7, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 287436803}
   m_SourcePrefab: {fileID: 100100000, guid: dc1ce056f90e09749a3bfa868460e5a7, type: 3}
 --- !u!4 &287436802 stripped
@@ -355,6 +382,19 @@ MonoBehaviour:
   walkCounter: 0
   waitCounter: 0
   isWalking: 0
+--- !u!114 &287436804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214541971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ea343cb1bd86d4384b41cf4f7b0a70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable_Object
+  <ItemName>k__BackingField: Big_Rabbit
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0

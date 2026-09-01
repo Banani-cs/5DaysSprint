@@ -11,6 +11,6 @@ public class Interactable_Object : MonoBehaviour
     {
         return ItemName;
     }
-    We write like above, less code, faster, and more o ptimized
+    We write like above, less code, faster, and more optimized
     */
 }

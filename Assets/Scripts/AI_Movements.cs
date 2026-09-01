@@ -45,7 +45,7 @@ public class AI_Movements : MonoBehaviour
             animator.SetBool("isRunning", true);
 
             walkCounter -= Time.deltaTime;
-
+            //Chooses a random direction to move.
             switch (WalkDirection)
             {
                 case 0:
@@ -84,12 +84,13 @@ public class AI_Movements : MonoBehaviour
 
             if (waitCounter <= 0)
             {
+                //Continue moving after the wait time is over
                 ChooseDirection();
             }
         }
     }
 
-
+    //Method to move.
     public void ChooseDirection()
     {
         WalkDirection = Random.Range(0, 4);

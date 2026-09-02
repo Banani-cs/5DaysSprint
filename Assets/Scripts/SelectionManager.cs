@@ -5,17 +5,21 @@ public class SelectionManager : MonoBehaviour
 {
     public GameObject interaction_Info_UI;
     TextMeshProUGUI interaction_Info_Text;
+    private Camera mainCamera;
+    [field: SerializeField] private float maxDistance = 5f;
 
     void Start()
     {
-        interaction_Info_Text = interaction_Info_UI.GetComponentInChildren<TextMeshProUGUI>();
+        mainCamera = Camera.main;
+        interaction_Info_Text = interaction_Info_UI.
+        GetComponentInChildren<TextMeshProUGUI>();
     }
 
     void Update()
     {
         //The Grid in Unity is 1 by 1, so x = 0.5 and y = 0.5 is basically the middle of the screen. The raycast is cast from the center of the screen, which is where the crosshair is looking.
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        if (Physics.Raycast(ray, out RaycastHit hitInfo))
+        Ray ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, maxDistance))
         {
             var selectedTransform = hitInfo.transform;
             /*if (selectedTransform.GetComponent<Interactable_Object>())

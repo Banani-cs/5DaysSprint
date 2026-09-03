@@ -6,13 +6,13 @@ public class PlayerMovements : MonoBehaviour
 {
     public CharacterController controller;
 
-    public float speed = 12f;
-    public float gravity = -9.81f * 2;
-    public float jumpHeight = 3f;
+    [field: SerializeField] private float speed = 12f;
+    [field: SerializeField] private float gravity = -9.81f * 2;
+    [field: SerializeField] private float jumpHeight = 3f;
 
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
+    [field: SerializeField] private Transform groundCheck;
+    [field: SerializeField] private float groundDistance = 0.4f;
+    [field: SerializeField] private LayerMask groundMask;
 
     Vector3 velocity;
 

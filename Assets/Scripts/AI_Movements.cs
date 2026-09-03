@@ -10,13 +10,13 @@ public class AI_Movements : MonoBehaviour
     private Rigidbody rigidBody;
     [field: SerializeField] private float moveSpeed = 2f;
     float walkTime;
-    public float walkCounter;
+    private float walkCounter;
     float waitTime;
-    public float waitCounter;
+    private float waitCounter;
 
-    int WalkDirection;
+    int walkDirection;
 
-    public bool isWalking;
+    private bool isWalking;
 
     // Start is called before the first frame update
     void Start()
@@ -95,7 +95,7 @@ public class AI_Movements : MonoBehaviour
         //Using RigidBody to move so physics can be applied to the AI, like colliding with walls and other objects. This is a much better practice than spamming transform.position, because that will just teleport the AI to the new position, and it will not collide with anything, which is not what we want.
         if (isWalking)
         {
-            switch (WalkDirection)
+            switch (walkDirection)
             {
                 case 0:
                     rigidBody.MoveRotation(Quaternion.Euler(0f, 0f, 0f));
@@ -115,12 +115,16 @@ public class AI_Movements : MonoBehaviour
                     break;
             }
         }
+        else
+        {
+            rigidBody.linearVelocity = new Vector3(0f, rigidBody.linearVelocity.y, 0f);
+        }
     }
 
     //Method to move.
     public void ChooseDirection()
     {
-        WalkDirection = Random.Range(0, 4);
+        walkDirection = Random.Range(0, 4);
 
         isWalking = true;
         walkCounter = walkTime;

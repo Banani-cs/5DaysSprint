@@ -5,8 +5,8 @@ using UnityEngine;
 public class MouseMovements : MonoBehaviour
 {
 
-    public float mouseSensitivity = 100f;
-    public Transform playerBody;
+    [field: SerializeField] private float mouseSensitivity = 100f;
+    [field: SerializeField] private Transform playerBody;
 
     float xRotation = 0f;
     void Start()
@@ -19,7 +19,7 @@ public class MouseMovements : MonoBehaviour
     {
         //Getting the mouse input//The Time.deltaTime is used to prevent the mouse from being too sensitive and to make it frame rate independent
 
-        //Without the Time.deltaTime, a person with a higher FPS will spin faster than the one that has a lower  FPS.
+        //Without the Time.deltaTime, a person with a higher FPS will spin faster than the one that has a lower  FPS. But to be fair the GetAxis function is already frame independent, so we can skip the Time.deltaTime, but we will keep it for now, just in case we want to change the sensitivity later on. Just a note
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
